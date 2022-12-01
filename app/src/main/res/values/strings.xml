@@ -1,0 +1,5 @@
+<resources>
+    <string name="input_name">Введите ваше имя</string>
+    <string name="app_name">Тренажёр школьных знаний</string>
+    <string name="go">Продолжить</string>
+</resources>
