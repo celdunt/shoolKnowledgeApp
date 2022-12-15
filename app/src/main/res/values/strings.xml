@@ -2,4 +2,13 @@
     <string name="input_name">Введите ваше имя</string>
     <string name="app_name">Тренажёр школьных знаний</string>
     <string name="go">Продолжить</string>
+    <string name="title_activity_app">AppActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="todo">TODO</string>
+    <string name="math">Математика</string>
+    <string name="russ">Русский яз.</string>
+    <string name="profile">Профиль</string>
+    <string name="app_activity_text">Чем займемся?</string>
 </resources>

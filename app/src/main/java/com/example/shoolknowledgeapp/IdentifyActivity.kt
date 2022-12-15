@@ -1,8 +1,10 @@
 package com.example.shoolknowledgeapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 
 class IdentifyActivity : AppCompatActivity() {
@@ -15,19 +17,32 @@ class IdentifyActivity : AppCompatActivity() {
         val nerd: ImageView = findViewById(R.id.nerd)
         val nerdDialog: ImageView = findViewById(R.id.nerd_dialog)
         animateNerd(nerd, nerdDialog)
-        animateNerdSecond(nerd)
+        animateNerdSecond(nerd, nerdDialog)
+
+        val nextButton: Button = findViewById(R.id.next)
+        nextButton.setOnClickListener {
+            startActivity(Intent(this, AppActivity().javaClass))
+        }
     }
 
-    private fun animateNerdSecond(nerd: ImageView) {
+    private fun animateNerdSecond(nerd: ImageView, nerdDialog: ImageView) {
         nerd.animate().apply {
             duration = 2000
             translationYBy(20f)
+            nerdDialog.animate().apply {
+                duration = 2000
+                translationYBy(10f)
+            }
         }.withEndAction {
             nerd.animate().apply {
                 duration = 2000
                 translationYBy(-20f)
+                nerdDialog.animate().apply {
+                    duration = 2000
+                    translationYBy(-10f)
+                }
             }.withEndAction {
-                animateNerdSecond(nerd)
+                animateNerdSecond(nerd, nerdDialog)
             }
         }.start()
     }

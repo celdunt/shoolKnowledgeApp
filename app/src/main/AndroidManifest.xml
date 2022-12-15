@@ -13,6 +13,22 @@
         android:theme="@style/Theme.ShoolKnowledgeApp"
         tools:targetApi="31">
         <activity
+            android:name=".MathActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AppActivity"
+            android:exported="false"
+            android:label="@string/title_activity_app"
+            android:theme="@style/Theme.ShoolKnowledgeApp.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".IdentifyActivity"
             android:exported="true">
             <intent-filter>
